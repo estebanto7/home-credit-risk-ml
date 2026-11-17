@@ -6,8 +6,32 @@ small and easier to reproduce.
 """
 
 from pathlib import Path
+import pandas as pd
 
+def load_csv(
+    path: str | Path,
+    encoding: str = "utf-8"
+) -> pd.DataFrame:
+    """
+    Load a CSV file into a pandas DataFrame.
 
-def describe_data_location(path: Path) -> str:
-    """Return a human-readable description of a planned data location."""
-    return f"Data location: {path}"
+    Parameters
+    ----------
+    path : str or Path
+        Path to the CSV file.
+    encoding : str
+        Character encoding used to read the file.
+
+    Returns
+    -------
+    pd.DataFrame
+        Loaded dataset.
+    """
+    path = Path(path)
+
+    if not path.is_file():
+        raise FileNotFoundError(
+            f"File not found: {path}"
+        )
+
+    return pd.read_csv(path, encoding=encoding)
