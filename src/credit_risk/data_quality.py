@@ -14,11 +14,11 @@ No imputation, dtype conversion or modification is ever performed on ``df``.
 
 from __future__ import annotations
 
+import json
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from html import escape
-import json
 from pathlib import Path
 from typing import Any, Mapping
 
