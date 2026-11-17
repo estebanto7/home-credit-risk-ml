@@ -18,12 +18,6 @@ dependencies = [
     "ipykernel>=6.0",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.0",
-    "ruff>=0.1",
-]
-
 [tool.setuptools.packages.find]
 where = ["src"]
 
