@@ -221,3 +221,34 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local credentials and IDE settings
+.vscode/
+.idea/
+*.env
+*.secret
+kaggle.json
+.kaggle/
+
+# Project data (keep directories with .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Generated reports, figures, and model artifacts
+reports/*
+!reports/figures/
+reports/figures/*
+!reports/figures/.gitkeep
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+*.h5
+*.parquet
+*.csv
+*.zip
+*.tar.gz
